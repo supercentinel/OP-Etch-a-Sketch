@@ -1,0 +1,21 @@
+#title {
+    text-align: center;
+}
+
+#grid {
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    border: solid black;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    flex: 1;
+}
