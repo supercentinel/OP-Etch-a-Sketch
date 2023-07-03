@@ -47,5 +47,20 @@ const clearGrid = () => {
     }
 }
 
-createGrid(32);
+const deleteGrid = () => {
+    columns = grid.querySelectorAll(".column");
 
+    console.log(columns);
+
+    for(let i = 0; i < columns.length; i++) {
+        let rows = columns[i].querySelectorAll(".row");
+
+        for(let k = 0; k < rows.length; k++) {
+            columns[i].removeChild(rows[k]);
+        }
+
+        grid.removeChild(columns[i]);
+    }
+}
+
+createGrid(4);
