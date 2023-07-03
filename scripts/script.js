@@ -50,8 +50,6 @@ const clearGrid = () => {
 const deleteGrid = () => {
     columns = grid.querySelectorAll(".column");
 
-    console.log(columns);
-
     for(let i = 0; i < columns.length; i++) {
         let rows = columns[i].querySelectorAll(".row");
 
@@ -61,6 +59,11 @@ const deleteGrid = () => {
 
         grid.removeChild(columns[i]);
     }
+}
+
+const resizeGrid = (size) => {
+    deleteGrid();
+    createGrid(size);
 }
 
 createGrid(4);
