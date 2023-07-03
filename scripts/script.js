@@ -14,27 +14,38 @@ const colorSquare = (square, color) => {
     square.style.backgroundColor = color;
 }
 
-let size = 32;
+bkcolor = "black";
 
-for(let i = 0; i < size; i++) {
-    let column = document.createElement("div");
+const createGrid = (size) => {
 
-    column.classList.add("column");
-    grid.appendChild(column);
+    for(let i = 0; i < size; i++) {
+        let column = document.createElement("div");
 
-    for(let k = 0; k < size; k++) {
-        let row = document.createElement("div");
+        column.classList.add("column");
+        grid.appendChild(column);
 
-        row.classList.add("row");
+        for(let k = 0; k < size; k++) {
+            let row = document.createElement("div");
 
-        row.addEventListener("mouseover", () => {
-            if(gridMouseDown > 0) {
-                colorSquare(row, "green");
-            }
-        });
+            row.classList.add("row");
 
-        column.appendChild(row);
+            row.addEventListener("mouseover", () => {
+                if(gridMouseDown > 0) {
+                    colorSquare(row, bkcolor);
+                }
+            });
+
+            column.appendChild(row);
+        }
     }
 }
 
-console.log(gridMouseDown);
+const clearGrid = () => {
+    squares = grid.querySelectorAll(".row");
+    for(let i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = "white";
+    }
+}
+
+createGrid(32);
+
