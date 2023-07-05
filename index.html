@@ -9,6 +9,19 @@
     <h1 id="title">Etch-a-Sketch</h1>
     <div id="grid" ondragstart="return false;" ondrop="return false;">
     </div>
+    <div id="options">
+        <div class="color">
+            <label for="colorInput">Color:</label>
+            <input type="color" name="color" id="colorInput">
+        </div>
+            <div class="clear">
+                <button id="clearButton">Clear</button>
+            </div>
+        <div class="size">
+            <label for="slider">Grid size:</label>
+            <input type="range" min="8" max="128" value="8" class="slider" id="slider" step="8">
+        </div>
     <script src="scripts/script.js"></script>
+    </div>
 </body>
 </html>

@@ -1,5 +1,10 @@
 const grid = document.querySelector("#grid");
 
+const changeColor = document.querySelector("#colorInput");
+const clearButton = document.querySelector("#clearButton");
+const resizeSlide = document.querySelector("#slider");
+
+
 gridMouseDown = 0;
 
 grid.addEventListener("mousedown", () => {
@@ -15,6 +20,8 @@ const colorSquare = (square, color) => {
 }
 
 bkcolor = "black";
+changeColor.value = bkcolor;
+resizeSlide.value = 8;
 
 const createGrid = (size) => {
 
@@ -66,4 +73,16 @@ const resizeGrid = (size) => {
     createGrid(size);
 }
 
-createGrid(4);
+createGrid(8);
+
+clearButton.addEventListener("click", () => {
+    clearGrid();
+});
+
+changeColor.addEventListener("change", () => {
+    bkcolor = changeColor.value;
+});
+
+resizeSlide.addEventListener("change", () => {
+    resizeGrid(resizeSlide.value);
+});

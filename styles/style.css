@@ -19,3 +19,36 @@
 .row {
     flex: 1;
 }
+
+#options {
+    margin: auto;
+    display: flex;
+}
+
+#options > div {
+    flex: 1;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 50px;
+}
+
+#colorInput {
+    margin: auto;
+    width: 50%;
+    height: 100px;
+}
+
+#slider {
+    margin: auto;
+    width: 50%;
+    height: 100px;
+}
+
+#clearButton {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 60%;
+    height: 100px;
+}
